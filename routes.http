@@ -22,3 +22,12 @@ Content-Type: audio/mpeg
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 ###
+
+# @name create-transcription
+
+POST http://localhost:3333/videos/739bfddb-6d0b-4275-99e5-f09877745ca6/transcription
+Content-Type: application/json
+
+{
+	"prompt": "league of legends, pain gaming, loud, tinows, robo"
+}

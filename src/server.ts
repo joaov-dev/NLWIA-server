@@ -1,12 +1,14 @@
 import { prisma } from './lib/prisma';
 import { fastify } from 'fastify';
-import { getAllPromptsRoutes } from './routes/get-all-prompts';
+import { getAllPromptsRoute } from './routes/get-all-prompts';
 import { uploadVideoRoute } from './routes/upload-video';
+import { createTranscriptionRoute } from './routes/create-transcription';
 
 const app = fastify();
 
-app.register(getAllPromptsRoutes)
+app.register(getAllPromptsRoute)
 app.register(uploadVideoRoute)
+app.register(createTranscriptionRoute)
 
 app.listen({
 	port: 3333
